@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">KernelSU</string>
+    <string name="issue_report_title">Having Trouble?</string>
+    <string name="issue_report_body">Encountered a bug or have feedback?</string>
+    <string name="issue_report_body_2">Report it as soon as possible!</string>
+    <string name="issue_report_github">Report on GitHub</string>
+    <string name="issue_report_telegram">Contact via Telegram</string>
+    <string name="issue_report_github_link">https://github.com/rifsxd/KernelSU-Next/issues</string>
+    <string name="issue_report_telegram_link">https://t.me/ksunext</string>
+    <string name="confirm">Confirm</string>
+    <string name="app_name" translatable="false">KernelSU Next</string>
     <string name="home">Home</string>
     <string name="home_not_installed">Not installed</string>
     <string name="home_click_to_install">Click to install</string>
@@ -8,12 +16,15 @@
     <string name="home_working_version">Version: %d</string>
     <string name="home_superuser_count">Superusers: %d</string>
     <string name="home_module_count">Modules: %d</string>
-    <string name="home_unsupported">Unsupported</string>
-    <string name="home_unsupported_reason">KernelSU only supports GKI kernels now</string>
-    <string name="home_kernel">Kernel</string>
-    <string name="home_manager_version">Manager version</string>
-    <string name="home_fingerprint">Fingerprint</string>
-    <string name="home_selinux_status">SELinux status</string>
+    <string name="home_failure">KernelSU Next v2 signature not found in kernel! [ !KSU_NEXT || != size/hash ]</string>
+    <string name="home_failure_tip">Ask your kernel developer to integrate KernelSU Next!</string>
+    <string name="home_kernel">Kernel Version</string>
+    <string name="home_susfs">SuSFS: %s</string>
+    <string name="home_susfs_version">SuSFS</string>
+    <string name="home_susfs_sus_su">SuS SU</string>
+    <string name="home_android">Android Version</string>
+    <string name="home_manager_version">Manager Version</string>
+    <string name="home_selinux_status">SELinux Mode</string>
     <string name="selinux_status_disabled">Disabled</string>
     <string name="selinux_status_enforcing">Enforcing</string>
     <string name="selinux_status_permissive">Permissive</string>
@@ -23,7 +34,12 @@
     <string name="module_failed_to_disable">Failed to disable module: %s</string>
     <string name="module_empty">No module installed</string>
     <string name="module">Module</string>
+    <string name="confirm_module_installation">Confirm Installation</string>
+    <string name="module_install_prompt_with_name">Do you want to continue installing module %1$s?</string>
+    <string name="module_sort_action_first">Sort (Action First)</string>
+    <string name="module_sort_enabled_first">Sort (Enabled First)</string>
     <string name="uninstall">Uninstall</string>
+    <string name="restore">Restore</string>
     <string name="module_install">Install</string>
     <string name="install">Install</string>
     <string name="reboot">Reboot</string>
@@ -37,6 +53,9 @@
     <string name="module_uninstall_confirm">Are you sure you want to uninstall module %s?</string>
     <string name="module_uninstall_success">%s uninstalled</string>
     <string name="module_uninstall_failed">Failed to uninstall: %s</string>
+    <string name="module_restore_confirm">Are you sure you want to restore module %s?</string>
+    <string name="module_restore_success">%s restoreed</string>
+    <string name="module_restore_failed">Failed to restore: %s</string>
     <string name="module_version">Version</string>
     <string name="module_author">Author</string>
     <string name="module_overlay_fs_not_available">Modules are unavailable as OverlayFS is disabled by the kernel.</string>
@@ -47,12 +66,18 @@
     <string name="safe_mode">Safe mode</string>
     <string name="reboot_to_apply">Reboot to take effect</string>
     <string name="module_magisk_conflict">Modules are unavailable due to a conflict with Magisk!</string>
-    <string name="home_learn_kernelsu">Learn KernelSU</string>
-    <string name="home_learn_kernelsu_url">https://kernelsu.org/guide/what-is-kernelsu.html</string>
-    <string name="home_click_to_learn_kernelsu">Learn how to install KernelSU and use modules</string>
-    <string name="home_support_title">Support Us</string>
-    <string name="home_support_content">KernelSU is, and always will be, free, and open source. You can however show us that you care by making a donation.</string>
-    <string name="about_source_code"><![CDATA[View source code at %1$s<br/>Join our %2$s channel]]></string>
+    <string name="home_module_mount">Module System</string>
+    <string name="home_magic_mount">Magic Mount</string>
+    <string name="home_next_kernelsu">🔥 Next Build</string>
+    <string name="home_next_kernelsu_repo">https://github.com/rifsxd/KernelSU-Next</string>
+    <string name="home_next_kernelsu_body">Next experimental branch. Check it out on GitHub!</string>
+    <string name="home_experimental_kernelsu">⚠️ Experimental Development Warning!</string>
+    <string name="home_experimental_kernelsu_repo">127.0.0.1</string>
+    <string name="home_experimental_kernelsu_body">Next is a non-official build which is always under active experimental development. It is provided as-is, with no guarantees of stability, performance, or reliability.</string>
+    <string name="home_experimental_kernelsu_body_point_1"> • Use at Your Own Risk: It may experience crashes, unexpected behavior, or cause system issues.</string>
+    <string name="home_experimental_kernelsu_body_point_2"> • No Warranty: The developers are not responsible for any data loss, system damage, or other consequences arising from its use.</string>
+    <string name="home_experimental_kernelsu_body_point_3"> • For Testing Purposes Only: It is intended for users who understand the risks and are comfortable troubleshooting issues.</string>
+    <string name="about_source_code"><![CDATA[View source code at %1$s]]></string>
     <string name="profile" translatable="false">App Profile</string>
     <string name="profile_default">Default</string>
     <string name="profile_template">Template</string>
@@ -67,10 +92,12 @@
     <string name="profile_selinux_context">SELinux context</string>
     <string name="profile_umount_modules">Umount modules</string>
     <string name="failed_to_update_app_profile">Failed to update App Profile for %s</string>
-    <string name="require_kernel_version">The current KernelSU version %d is too low for the manager to work properly. Please upgrade to version %d or higher!</string>
+    <string name="require_kernel_version">The current KernelSU-Next version %d is too low for the manager to work properly. Please upgrade to version %d or higher!</string>
     <string name="settings_umount_modules_default">Umount modules by default</string>
     <string name="settings_umount_modules_default_summary">The global default value for \"Umount modules\" in App Profile. If enabled, it will remove all module modifications to the system for apps that don\'t have a profile set.</string>
-    <string name="profile_umount_modules_summary">Enabling this option will allow KernelSU to restore any modified files by the modules for this app.</string>
+    <string name="settings_susfs_toggle">Hide suspecious su hooks</string>
+    <string name="settings_susfs_toggle_summary">It disables kprobe hooks made by ksu, and instead the non-kprobe inline hooks will be enabled, just the same implementation for non-gki kernel without kprobe supported.</string>
+    <string name="profile_umount_modules_summary">Enabling this option will allow KernelSU-Next to restore any modified files by the modules for this app.</string>
     <string name="profile_selinux_domain">Domain</string>
     <string name="profile_selinux_rules">Rules</string>
     <string name="module_update">Update</string>
@@ -78,6 +105,7 @@
     <string name="module_start_downloading">Start downloading: %s</string>
     <string name="new_version_available">New version %s is available, click to upgrade.</string>
     <string name="launch_app">Launch</string>
+    <string name="close">Close</string>
     <string name="force_stop_app">Force stop</string>
     <string name="restart_app">Restart</string>
     <string name="failed_to_update_sepolicy">Failed to update SELinux rules for: %s</string>
@@ -124,9 +152,9 @@
     <string name="settings_uninstall_temporary">Uninstall temporarily</string>
     <string name="settings_uninstall_permanent">Uninstall permanently</string>
     <string name="settings_restore_stock_image">Restore stock image</string>
-    <string name="settings_uninstall_temporary_message">Temporarily uninstall KernelSU, restore to original state after next reboot.</string>
-    <string name="settings_uninstall_permanent_message">Uninstalling KernelSU (Root and all modules) completely and permanently.</string>
-    <string name="settings_restore_stock_image_message">Restore the stock factory image (If a backup exists), usually used before OTA; if you need to uninstall KernelSU, please use \"Uninstall permanently\".</string>
+    <string name="settings_uninstall_temporary_message">Temporarily uninstall KernelSU-Next, restore to original state after next reboot.</string>
+    <string name="settings_uninstall_permanent_message">Uninstalling KernelSU-Next (Root and all modules) completely and permanently.</string>
+    <string name="settings_restore_stock_image_message">Restore the stock factory image (If a backup exists), usually used before OTA; if you need to uninstall KernelSU-Next, please use \"Uninstall permanently\".</string>
     <string name="flashing">Flashing</string>
     <string name="flash_success">Flash success</string>
     <string name="flash_failed">Flash failed</string>

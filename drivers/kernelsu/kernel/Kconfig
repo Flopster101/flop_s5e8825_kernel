@@ -82,9 +82,10 @@ config KSU_SUSFS_SUS_KSTAT
 config KSU_SUSFS_SUS_OVERLAYFS
     bool "Enable to automatically spoof kstat and kstatfs for overlayed files/directories"
     depends on KSU_SUSFS
-    default y
+    default n
     help
       - Automatically spoof the kstat and kstatfs for overlayed files/directories.
+      - Enable it if you are using legacy KernelSU and dont have auto hide features enabled.
       - No susfs command is needed in userspace.
       - Effective on all processes.
 

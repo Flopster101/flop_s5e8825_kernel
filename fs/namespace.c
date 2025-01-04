@@ -4758,3 +4758,16 @@ void susfs_run_try_umount_for_current_mnt_ns(void) {
 	susfs_try_umount_all(current_uid().val);
 }
 #endif
+#ifdef CONFIG_KSU_SUSFS
+bool susfs_is_mnt_devname_ksu(struct path *path) {
+	struct mount *mnt;
+
+	if (path && path->mnt) {
+		mnt = real_mount(path->mnt);
+		if (mnt && mnt->mnt_devname && !strcmp(mnt->mnt_devname, "KSU")) {
+			return true;
+		}
+	}
+	return false;
+}
+#endif
